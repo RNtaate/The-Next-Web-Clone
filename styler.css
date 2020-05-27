@@ -119,16 +119,26 @@ header > p > a {
     color: black;
 }
 
-.sec-2 h2 {
+.article-headings >h2 {
+    display: inline-block;
     color: orangered;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 900;
     padding: 15px 0;
+    font-family: sans-serif;
 }
 
-.sec-2 h2:hover {
+.fa-greater-than {
+    color: orangered;
+}
+
+.article-headings:hover > h2,
+.article-headings:hover > i,
+.links a:hover,
+.img-description span:nth-child(2):hover {
     color: black;
 }
+
 
 .sec-2 article {
     display: flex;
@@ -166,6 +176,25 @@ header > p > a {
     margin-right: 10px;
 }
 
-.img-description span:nth-child(2):hover {
-    color: rgb(22, 22, 22);
+.sec-3 {
+    margin: 0 15px;
+}
+
+.funding-head {
+    padding: 30px 0;
+}
+
+.funding-head a {
+    text-decoration: none;
+    padding: 5px;
+    color: orangered;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a {
+    font-size: 0.8em;
 }
