@@ -114,7 +114,7 @@ header > p > a {
 .sec-2 {
   display: grid;
   gap: 30px;
-  margin: 200px 20px 0 20px;
+  margin: 50px 20px 20px 20px;
 }
 
 .sec-2 a {
@@ -124,6 +124,7 @@ header > p > a {
 
 .article-headings {
   text-decoration: none;
+  color: orangered;
 }
 
 .article-headings > h2 {
@@ -142,7 +143,8 @@ header > p > a {
 .article-headings:hover > h2,
 .article-headings:hover > i,
 .links a:hover,
-.img-description span:nth-child(2):hover {
+.img-description span:nth-child(2):hover,
+.alldeals:hover > span {
   color: black;
 }
 
@@ -350,7 +352,6 @@ header > p > a {
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
   text-decoration-thickness: 0.5px; 
-  /* check if this is working on firefox browser */
 }
 
 .sec-4-articles > .main-articles > span:not(:first-child) {
@@ -412,4 +413,93 @@ header > p > a {
   text-decoration: none;
   color: rgb(88, 86, 86);
   margin-left: 5px;
+}
+
+.deals-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deals-sec > article > .img-description > span:nth-child(2) {
+    text-decoration: line-through;
+}
+
+footer,
+.icons-div > a,
+.upper-footer > ul > li > a {
+    color: white;
+}
+
+.upper-footer {
+    background-color: #131313;
+}
+
+.icons-div {
+    display: flex;
+    justify-content: center;
+    padding: 40px 40px 20px 40px;
+}
+
+.icons-div > a {
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    background-color: #333;
+    margin: 0 0.2em;
+    border-radius: 50%;
+    border: none;
+    text-decoration: none;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.icons-div > a:hover {
+    background-color: black;
+    border: 2px solid #333;
+}
+
+.upper-footer > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 40px 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.upper-footer > ul > li {
+    margin: 0 0.35em;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.upper-footer > ul > li > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.upper-footer > ul > li > a:hover {
+    color: white;
+}
+
+.lower-footer  {
+    background-color: black;
+    padding: 2em 0;
+}
+
+.lower-footer > p {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.lower-footer > p > a:last-child > img {
+    width: 5em;
+}
+
+.lower-footer > p > a:first-child > img {
+    width: 3em;
 }
