@@ -17,7 +17,7 @@ header {
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 3;
+    z-index: 1;
 }
 
 nav {
@@ -79,7 +79,6 @@ header > p > a {
 }
 
 .main-articles {
-    background-color: green;
     padding:100px 10px 20px 10px;
     background-size: cover;
     color: white;
@@ -111,7 +110,7 @@ header > p > a {
 .sec-2 {
     display: grid;
     gap: 30px;
-    margin: 200px 10px 0 10px;
+    margin: 200px 20px 0 20px;
 }
 
 .sec-2 a {
@@ -119,8 +118,8 @@ header > p > a {
     color: black;
 }
 
-.article-headings >h2 {
-    display: inline-block;
+.article-headings > h2 {
+    display: inline;
     color: orangered;
     font-size: 1.5em;
     font-weight: 900;
@@ -177,24 +176,101 @@ header > p > a {
 }
 
 .sec-3 {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .funding-head {
     padding: 30px 0;
+    position: static;
 }
 
 .funding-head a {
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 0;
     color: orangered;
 }
 
 .links {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 .links a {
     font-size: 0.8em;
+}
+
+.aside-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.funding-link {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.funding-article {
+    margin-top: 20px;
+}
+
+.funding-article > h3 {
+    background-color: #FF4422;
+    padding: 10px 0 10px 80px;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.price-div {
+    padding : 10px 0 10px 80px;
+    background-color: #FFEBE7;
+    margin-bottom: 10px;
+}
+
+.dollars {
+    color : black;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.price-div  > p:last-child {
+    color : gray;
+    font-size: 0.7em;
+}
+
+.fa-tag,
+.fa-toolbox {
+    color: black;
+    margin-right: 10px;
+}
+
+.funding-article > p {
+    color : rgba(80, 80, 80);
+    font-size: 0.8em;
+    padding : 10px 0 5px 10px;
+}
+
+.funding-article > p:last-child {
+    border-top: 0.5px solid rgba(255, 68, 34, 0.3);
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.funding-article > p:last-child > span {
+    color: gray;
+}
+
+.funding-article > p:nth-child(3):hover,
+.funding-article > p:nth-child(4):hover {
+    color: black;
+}
+
+.funding-article-img {
+    position: absolute;
+    width: 3.5em;
+    height: 3.5em;
+    top: 30px;
+    left: 10px;
 }
