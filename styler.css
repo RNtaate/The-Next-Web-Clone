@@ -17,7 +17,16 @@ body {
   color: #FF4422;
 }
 
+.hidden-flex,
+.hidden-block {
+  /* position: absolute;
+  clip: rect(1px 1px 1px 1px); */
+  display: none; 
+}
+
 header {
+  display: flex;
+  flex-direction: column;
   position: sticky;
   top: 0;
   background-color: white;
@@ -26,34 +35,87 @@ header {
 
 nav {
   display: flex;
+  align-items: center;
+  height: 45px;
+  overflow: hidden;
+}
+
+.nav-logo-div > img {
+  width: 100px;
+  height:inherit;
+}
+
+.nav-wrapper {
+  width: 100%;
+}
+
+.black-nav {
+  /* display: none; */
+  justify-content: space-between;
+  background-color: black;
+  padding: 8px 20px;
+}
+
+.black-nav-left ul,
+.black-nav-right ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.black-nav-left ul li a,
+.black-nav-right ul li a,
+.search-menu-div ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  padding: 0 0.4em;
+  font-size: 0.82em;
+}
+
+.black-nav-left ul li a:hover,
+.black-nav-right ul li a:hover,
+.upper-footer > ul > li > a:hover,
+.black-nav-left ul li:first-child > a  {
+  color: white;
+}
+
+.search-menu-div,
+.search-menu-spans {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 20px;
 }
 
-nav > img {
-  width: 100px;
-  height: auto;
-}
-
-.search-menu-div {
+.search-menu-div > ul {
+  list-style-type: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  visibility: hidden;
 }
 
-.search-menu-div > span {
+.search-menu-div ul li a  {
+  color: gray;
+  font-size: 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+}
+
+.search-menu-div ul li a:hover {
+  color: black;
+}
+
+.search-menu-div > .search-menu-spans > span {
   padding: 18px;
   opacity: 0.5;
   border: 1px solid gray;
-  border-top: none;
+  border-top: none;  
 }
 
-.search-menu-div > span:first-child {
+.search-menu-spans > span:first-child {
   transform: scaleX(-1);
   border-left: none;
 }
 
-.search-menu-div > span:last-child {
+.search-menu-spans > span:last-child {
   color: red;
 }
 
@@ -298,13 +360,14 @@ header > p > a {
 }
 
 .sec-4-articles > .main-articles {
-  padding-top: 13em;
+  padding-top: 50vw;
   margin-top: 10px;
 }
 
 .sec-4-articles:nth-child(3) > .main-articles{
   background-image: linear-gradient(to bottom, rgba(161, 161, 161, 0), rgba(0, 0, 0, 1)),
   url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/02/xt-3-3-368x276.jpg");
+  
 }
 
 .sec-4-articles:nth-child(5) > .main-articles{
@@ -437,6 +500,7 @@ footer,
 
 .icons-div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 40px 40px 20px 40px;
 }
@@ -479,10 +543,6 @@ footer,
     color: rgba(255, 255, 255, 0.6);
 }
 
-.upper-footer > ul > li > a:hover {
-    color: white;
-}
-
 .lower-footer  {
     background-color: black;
     padding: 2em 0;
@@ -502,4 +562,27 @@ footer,
 
 .lower-footer > p > a:first-child > img {
     width: 3em;
+}
+
+@media only screen and (min-width: 768px) {
+  .hidden-flex {
+    display: flex;
+  }
+
+  .hidden-block {
+    display: flex;
+  }
+
+  nav {
+    height: 80px;
+  }
+
+  .nav-logo-div > img:first-child,
+  .search-menu-spans > span:last-child {
+    display: none;
+  }
+
+  .search-menu-div > ul {
+    visibility: visible;
+  }
 }
