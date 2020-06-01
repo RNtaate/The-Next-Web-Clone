@@ -499,7 +499,6 @@ header > p {
 .sec-4-articles > .main-articles > h2:hover {
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.2);
-  text-decoration-thickness: 0.5px;
 }
 
 .sec-4-articles > .main-articles > span:not(:first-child) {
