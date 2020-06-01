@@ -181,6 +181,7 @@ header > p > a {
 .sec-2 {
   display: grid;
   gap: 30px;
+  row-gap: 10px;
   margin: 50px 20px 20px 20px;
 }
 
@@ -216,13 +217,16 @@ header > p > a {
 }
 
 .sec-2 article {
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 100px 1fr ;
 }
 
 .img {
-  width: 100px;
-  height: 70px;
+  /* width: 100px; */
+  height: 80px;
   overflow: hidden;
+  background-color: green;
 }
 
 .sec-2 article img {
@@ -285,6 +289,7 @@ header > p > a {
   text-decoration: none;
   color: white;
   position: relative;
+  overflow: hidden;
 }
 
 .funding-article {
@@ -293,10 +298,16 @@ header > p > a {
 
 .funding-article > h3 {
   background-color: #FF4422;
-  padding: 10px 0 10px 80px;
+  padding: 10px 5px 10px 80px;
   font-size: 1.1em;
   font-family: sans-serif;
   font-weight: 700;
+}
+
+.funding-article > h3 > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .price-div {
@@ -623,6 +634,7 @@ footer,
   }
 
   .sec-2 article {
+    display: flex;
     flex-direction: column;
   } 
 
@@ -641,6 +653,35 @@ footer,
   .img-description {
     padding: 10px 0 0 0;
   }
+
+  .aside-div {
+    flex-direction: unset;
+    justify-content: space-around;
+    padding :0;
+  }
+
+  .aside-div a:not(:first-child){
+    margin-left: 20px;
+  }
+
+  .links {
+    flex-direction: row;
+  }
+
+  .links a {
+    margin-right: 15px;
+    padding: 0 15px 0 0;
+    font-size: 1.1em;
+  }
+
+  .links a:not(:last-child) {
+    border-right: 1px solid #FF4422;
+  }
+
+  a.hidden-flex {
+    display: none;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -678,5 +719,20 @@ footer,
   .img-description > p {
     font-size: 1.1em;
     font-weight: bolder;
+  }
+
+  .funding-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .links a {
+    font-size: 1em;
+  }
+
+  a.hidden-flex {
+    display: flex;
   }
 }
