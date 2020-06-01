@@ -30,7 +30,7 @@ header {
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 1;
+  z-index: 2;
 }
 
 nav {
@@ -153,7 +153,11 @@ header > p > a {
   color: white;
 }
 
-.sec-1 > .main-articles:nth-child(2) {
+.sec-1-link {
+  text-decoration: none;
+}
+
+.sec-1 > .main-articles:nth-child(2){
   background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.2), rgba(0, 0, 0, 1)),
   url("images/image4.png"); 
 }
@@ -176,7 +180,14 @@ header > p > a {
 
 .insights {
   font-weight: 900;
+  font-size: 1em;
+  font-family: 'Rajdhani', sans-serif;
 }
+
+/* main {
+  background-color: green;
+  margin-bottom: 0;
+} */
 
 .sec-2 {
   display: grid;
@@ -217,16 +228,13 @@ header > p > a {
 }
 
 .sec-2 article {
-  /* display: flex; */
   display: grid;
   grid-template-columns: 100px 1fr ;
 }
 
 .img {
-  /* width: 100px; */
   height: 80px;
   overflow: hidden;
-  background-color: green;
 }
 
 .sec-2 article img {
@@ -375,7 +383,7 @@ header > p > a {
 }
 
 .sec-4-articles > .main-articles {
-  height: 100vh;
+  height:70vw;
   margin-top: 10px;
 }
 
@@ -501,6 +509,10 @@ header > p > a {
 
 .deals-sec > article > .img-description > span:nth-child(2) {
     text-decoration: line-through;
+}
+
+footer {
+  margin-top: 50px;
 }
 
 footer,
@@ -698,6 +710,45 @@ footer,
   height: 35vw;
 }
 
+.deals-div {
+  grid-column: 1 / -1;
+}
+
+.deals-sec > article {
+  position: relative;
+}
+
+.discount {
+  display: inline;
+  position: absolute;
+  top: 22px;
+  right: 3px;
+  color: black;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 0.8em;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+
+.deals-sec > article::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  border-style: solid;
+  border-width: 40px;
+  border-color: #FFCC00 #FFCC00 transparent transparent;
+}
+
+.icons-div > a {
+  margin-right: 14px;
+}
+
+.lower-footer > p {
+  width: 70%;
+}
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -759,5 +810,12 @@ footer,
 
   .sec-4-articles > .main-articles {
     height: 23vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    width: 92%;
+    margin: 0 auto;
   }
 }
