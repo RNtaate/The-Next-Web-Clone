@@ -20,7 +20,7 @@ This project covers the following HTML and CSS3 concepts
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/RNtaate/The-Next-Web-Clone/f26fddf22a7f7cfce819db67f3ec4f198a4efd5d/index.html)
+[Live Demo Link](https://rawcdn.githack.com/RNtaate/The-Next-Web-Clone/31776f27bff42069dbaab4515521fe6520d0b3af/index.html)
 
 
 ## Getting Started
